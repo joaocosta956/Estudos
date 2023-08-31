@@ -5,7 +5,23 @@
 #            0123456789.....
 string_um = 'Olá, como você está?'
 
+# Aqui nos podemos selecionar o inicio e o fim dos indices e também podemos selecinar de quantos em quantos
+#               i:f  p
+print(string_um[9:19:1])
+
+# i = Inicio, f = Fim, p = Passos (Por padrão vem 1)
+# Mas lembre-se, o a letra do 9, não vai aparecer, é apartir
+# E caso não informe o index final, irá apartir do 9 até o fim.
+print(10*'-','Passos 2',10*'-')
+print(string_um[9::2])
+
+# Se você colocar um número negativo a string é iterado ao contrário
+# Não precisa informar os números
+print(10*'-','Passos negativos -1',10*'-')
+print(string_um[::-1])
+
 # Veja que até os espaços são mostrados
+print(10*'-','Indices',10*'-')
 
 print(string_um[0])
 print(string_um[1])
