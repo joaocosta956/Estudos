@@ -20,6 +20,14 @@ print(string_um[9::2])
 print(10*'-','Passos negativos -1',10*'-')
 print(string_um[::-1])
 
+
+
+# Agora veremos um palíndromo kkkk
+palindromo = 'socorram me subi no onibus em marrocos'
+print(10*'-','Palíndromo -1',10*'-')
+print(palindromo[::-1])
+
+
 # Veja que até os espaços são mostrados
 print(10*'-','Indices',10*'-')
 
