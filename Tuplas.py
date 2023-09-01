@@ -40,3 +40,21 @@ print(tupla[8])
 for i in tupla[8]:
     print('chave '+i)
     print(f'valor {tupla[8][i]}')
+
+# Com tuplas podemos fazer algo bem comum nos programas em Python, chamado "packing-unpacking"
+# É como se estivéssemos dizendo que "a e b são iguais a 0 e 'Deu certo?' respectivamente"
+a,b = 0, 'Deu certo?'
+
+print(10*'-','Packing-unpacking',10*'-')
+
+print(a)
+print(b)
+
+# E podemos facilmente trocar os valores
+
+a,b = b,a
+
+print(10*'-',10*'-')
+
+print(a)
+print(b)
