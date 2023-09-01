@@ -20,13 +20,10 @@ print(string_um[9::2])
 print(10*'-','Passos negativos -1',10*'-')
 print(string_um[::-1])
 
-
-
 # Agora veremos um palíndromo kkkk
 palindromo = 'socorram me subi no onibus em marrocos'
 print(10*'-','Palíndromo -1',10*'-')
 print(palindromo[::-1])
-
 
 # Aqui temos um loop while, poderia ser com for também
 # Onde a função "len()" retorna o número de letras/indices
@@ -41,6 +38,12 @@ while i < len_string_um:
     print(string_um[i])
     i += 1
     print(f'Indice: {i}')
+
+
+# Quando são strings, o operador "+" se torna de concatenação
+
+palavra = 'Oi'
+print(palavra+', como você está?')
 
 # Veja que até os espaços são mostrados
 print(10*'-','Indices',10*'-')
