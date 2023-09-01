@@ -39,6 +39,12 @@ while i < len_string_um:
     i += 1
     print(f'Indice: {i}')
 
+
+# Quando são strings, o operador "+" se torna de concatenação
+
+palavra = 'Oi'
+print(palavra+', como você está?')
+
 # Veja que até os espaços são mostrados
 print(10*'-','Indices',10*'-')
 
