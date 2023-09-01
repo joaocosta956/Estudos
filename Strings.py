@@ -28,6 +28,20 @@ print(10*'-','Palíndromo -1',10*'-')
 print(palindromo[::-1])
 
 
+# Aqui temos um loop while, poderia ser com for também
+# Onde a função "len()" retorna o número de letras/indices
+# Então enquanto len_string_um for menor que i (que começa no 0 e é incrementado no loop while)
+
+len_string_um = len(string_um)
+i = 0
+
+print(10*'-','Por loop While',10*'-')
+
+while i < len_string_um:
+    print(string_um[i])
+    i += 1
+    print(f'Indice: {i}')
+
 # Veja que até os espaços são mostrados
 print(10*'-','Indices',10*'-')
 
@@ -55,4 +69,3 @@ print(string_um[19])
 # Vai até aqui, apartir daqui gera um Erro IndexError: string index out of range
 # Ou seja o index da palavra está fora do "range", da "pool".
 print(string_um[20])
-
