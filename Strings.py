@@ -20,13 +20,10 @@ print(string_um[9::2])
 print(10*'-','Passos negativos -1',10*'-')
 print(string_um[::-1])
 
-
-
 # Agora veremos um palíndromo kkkk
 palindromo = 'socorram me subi no onibus em marrocos'
 print(10*'-','Palíndromo -1',10*'-')
 print(palindromo[::-1])
-
 
 # Aqui temos um loop while, poderia ser com for também
 # Onde a função "len()" retorna o número de letras/indices
