@@ -1,4 +1,4 @@
-# Tuplas são objetos em Python(assim como quase tudo), mas diferente das listas, elas não são mutáveis. Uma vez definida não tem como alterar
+# Tuplas são objetos em Python(assim como quase tudo), mas diferente das listas, elas não são mutáveis. Uma vez definida não tem como alterar, somente redefinindo o valor.
 
 tupl = (1,2,3)
 
