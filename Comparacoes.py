@@ -10,11 +10,11 @@ y = 5
 
 print(10*'-','If, Elif, Else',10*'-')
 
-# Se X for maior que Y, faça
+# Se X for maior que Y, faça.
 if x > y:
     print(f'{x} é maior que {y}')
 
-# Caso não seja maior, verifica se não é igual
+# Caso não seja maior, verifica se não é igual e então faça
 elif x == y:
     print(f'{x} é igual a {y}')
 
