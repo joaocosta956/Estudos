@@ -4,12 +4,12 @@ print(10*'-','Break em um loop for',10*'-')
 
 # n = int(input('Insira um número: '))
 
-# for i in range(2, n):
-#     if n % i == 0:
-#         print('Número não é primo')     
-#     else:
-#         print('Não é primo')
-#     break # Tente apagar este linha para ver o que acontece
+for i in range(2, n):
+    if n % i == 0:
+        print('Número não é primo')     
+    else:
+        print('Não é primo')
+    break # Tente apagar este linha para ver o que acontece
 
 
 print(10*'-','Break em loop while',10*'-')
