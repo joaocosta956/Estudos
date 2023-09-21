@@ -10,8 +10,8 @@ string_um = 'Olá, como você está?'
 print(string_um[9:19:1])
 
 # i = Inicio, f = Fim, p = Passos (Por padrão vem 1)
-# Mas lembre-se, o a letra do 9, não vai aparecer, é apartir
-# E caso não informe o index final, irá apartir do 9 até o fim.
+# Mas lembre-se, o a letra do 9, não vai aparecer, é a partir
+# E caso não informe o index final, irá a partir do 9 até o fim.
 print(10*'-','Passos 2',10*'-')
 print(string_um[9::2])
 
@@ -35,14 +35,16 @@ i = 0
 print(10*'-','Por loop While',10*'-')
 
 while i < len_string_um:
+    print(f'Indice: {i}')
     print(string_um[i])
     i += 1
-    print(f'Indice: {i}')
+    
 
 
 # Quando são strings, o operador "+" se torna de concatenação
 
 palavra = 'Oi'
+print(10*'-','Concatenação',10*'-')
 print(palavra+', como você está?')
 
 # Veja que até os espaços são mostrados
@@ -72,3 +74,4 @@ print(string_um[19])
 # Vai até aqui, apartir daqui gera um Erro IndexError: string index out of range
 # Ou seja o index da palavra está fora do "range", da "pool".
 print(string_um[20])
+
