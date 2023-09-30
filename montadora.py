@@ -39,14 +39,14 @@ motor_1 = Motor('1.0')
 carro1.fabricante = volkswagem
 carro1.motor = motor_1
 
-# print(carro1.fabricante.nome,carro1.nome,carro1.motor.nome)
+#print(carro1.fabricante.nome,carro1.nome,carro1.motor.nome)
 
 uno = Carro('Uno')
 fiat = Fabricante('Fiat')
 uno.fabricante = fiat
 uno.motor = motor_1
 
-# print(uno.fabricante.nome,uno.nome,uno.motor.nome )
+#print(uno.fabricante.nome,uno.nome,uno.motor.nome )
 
 focus = Carro('Focus')
 ford = Fabricante('Ford')
@@ -54,7 +54,7 @@ motor_2 = Motor('2.0')
 focus.fabricante = ford
 focus.motor = motor_2
 
-# print(focus.fabricante.nome,focus.nome,focus.motor.nome)
+#print(focus.fabricante.nome,focus.nome,focus.motor.nome)
 
 def get_dados(carro):
     print(carro.nome, carro.fabricante.nome, carro.motor.nome)
