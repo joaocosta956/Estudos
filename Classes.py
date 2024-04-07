@@ -1,4 +1,6 @@
 class Camera:
+    # metodo inicial, crie ele caso já queira definir um atributo na instancia, no caso, nome
+    # LEMBRANDO QUE O PRIMEIRO PARAMETRO SEMPRE VAI SER RESERVADO PARA O SELF, INDEPENDENTE DO NOME QUE DER!!! 
     def __init__(self, nome, filmando=False):
         self.nome = nome
         self.filmando = filmando
@@ -8,7 +10,7 @@ class Camera:
             print(f'{self.nome} já está filmando...')
             return
         print(f'{self.nome} está filmando...')
-        filmando = True
+        self.filmando = True
 
     def parar_filmar(self):
         if not self.filmando:
