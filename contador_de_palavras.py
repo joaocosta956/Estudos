@@ -4,8 +4,10 @@
 import os
 os.system('cls')
 
-frase_input = input('Insira uma frase: ')
+#Frase do user
+frase_input = input('Insira uma frase: ').lower()
 
+#função que separa as palavras, fiz no improviso, como prática, pode ser substituido por métodos de string (.split())
 def separa_palavra(palavras):
     palavras_lista = []
     palavra = ''
@@ -20,7 +22,7 @@ def separa_palavra(palavras):
     print(palavras_lista)
     return palavras_lista
 
-
+#Função que conta palavras iguais
 def contar_palavras_iguais(palavras_lista):
     palavra_salva = {}
     for palavra in palavras_lista:
@@ -35,5 +37,6 @@ def contar_palavras_iguais(palavras_lista):
 frase_1 = separa_palavra(frase_input)
 frase_contagem = contar_palavras_iguais(frase_1)
 
+#Aqui o resultado é exibido
 for palavra, contagem in frase_contagem.items():
     print(f'Palavra: {palavra}, Contagem: {contagem}')
