@@ -2,13 +2,34 @@ import abc
 
 class Conta(abc.ABC):
     def __init__(self, agencia : int, conta : int , saldo=0):
-        self.agencia = agencia
-        self.conta = conta
-        self.saldo = saldo
+        self._agencia = agencia
+        self._conta = conta
+        self._saldo = saldo
 
     @abc.abstractmethod
     def sacar(self,valor : int):
         ...
+
+    @property
+    def agencia(self):
+        return self._agencia
+    @agencia.setter
+    def agencia(self, value):
+        self._agencia = value
+
+    @property
+    def conta(self):
+        return self._conta
+    @conta.setter
+    def conta(self, value):
+        self._conta = value
+
+    @property
+    def saldo(self):
+        return self._saldo
+    @saldo.setter
+    def saldo(self, value):
+        self._saldo = value
 
     def depositar(self, valor : int):
         self.saldo += valor
@@ -38,13 +59,19 @@ class ContaPoupanca(Conta):
 class ContaCorrente(Conta):
     def __init__(self, agencia, conta, saldo=0, limite=0):
         super().__init__(agencia,conta, saldo)
-        self.limite = limite
+        self._limite = limite
 
     def __repr__(self) -> str:
         class_name = type(self).__name__
         attr = f'({self.agencia!r}, {self.conta!r}, {self.saldo}, {self.limite})'
         return f'{class_name},{attr}'
 
+    @property
+    def limite(self):
+        return self._limite
+    @limite.setter
+    def agencia(self, value):
+        self._limite = value
 
     def sacar(self, valor):
         saldo_pos_saque = self.saldo - valor
