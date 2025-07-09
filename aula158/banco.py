@@ -64,6 +64,8 @@ if __name__ == '__main__':
     banco.agencia.extend([111,222])
     print(banco)
 
-    print(banco.autenticar(c1.conta, c2))
-    print(banco.autenticar(c2.conta, c1))
-    c1.conta.sacar(1)
+    print(banco.autenticar(c1.conta, c1))
+    print(banco.autenticar(c2.conta, c2))
+    
+    if banco.autenticar(c2.conta, c1):
+        c1.conta.sacar(10)
