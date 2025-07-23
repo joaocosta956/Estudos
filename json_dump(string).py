@@ -2,14 +2,16 @@ import json
 from pprint import pprint
 from typing import TypedDict
 
+
 class Movie(TypedDict):
-    title : str
-    original_title : str
-    is_movie : bool
-    imdb_rating : float
-    year : int
-    characters : list[str]
-    budget : None | float
+    title: str
+    original_title: str
+    is_movie: bool
+    imdb_rating: float
+    year: int
+    characters: list[str]
+    budget: None | float
+
 
 string_json = '''
 {
@@ -23,6 +25,7 @@ string_json = '''
 }
 '''
 
-movie : Movie = json.loads(string_json)
+movie: Movie = json.loads(string_json)
 pprint(movie['original_title'])
 pprint(movie['characters'][0])
+print(json.dumps(movie, ensure_ascii=False, indent=2))

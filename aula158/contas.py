@@ -1,18 +1,20 @@
 import abc
 
+
 class Conta(abc.ABC):
-    def __init__(self, agencia : int, conta : int , saldo=0):
+    def __init__(self, agencia: int, conta: int, saldo=0):
         self._agencia = agencia
         self._conta = conta
         self._saldo = saldo
 
     @abc.abstractmethod
-    def sacar(self,valor : int):
+    def sacar(self, valor: int):
         ...
 
     @property
     def agencia(self):
         return self._agencia
+
     @agencia.setter
     def agencia(self, value):
         self._agencia = value
@@ -20,6 +22,7 @@ class Conta(abc.ABC):
     @property
     def conta(self):
         return self._conta
+
     @conta.setter
     def conta(self, value):
         self._conta = value
@@ -27,11 +30,12 @@ class Conta(abc.ABC):
     @property
     def saldo(self):
         return self._saldo
+
     @saldo.setter
     def saldo(self, value):
         self._saldo = value
 
-    def depositar(self, valor : int):
+    def depositar(self, valor: int):
         self.saldo += valor
         self.detalhes(f'(Deposito {valor})')
 
@@ -56,9 +60,10 @@ class ContaPoupanca(Conta):
         print('Não foi possivel sacar o valor desejado')
         self.detalhes(f'SAQUE NEGADO {valor}')
 
+
 class ContaCorrente(Conta):
     def __init__(self, agencia, conta, saldo=0, limite=0):
-        super().__init__(agencia,conta, saldo)
+        super().__init__(agencia, conta, saldo)
         self._limite = limite
 
     def __repr__(self) -> str:
@@ -69,6 +74,7 @@ class ContaCorrente(Conta):
     @property
     def limite(self):
         return self._limite
+
     @limite.setter
     def agencia(self, value):
         self._limite = value
@@ -83,12 +89,13 @@ class ContaCorrente(Conta):
         print('Não foi possivel sacar o valor desejado')
         self.detalhes(f'SAQUE NEGADO {valor}')
 
+
 if __name__ == '__main__':
-    cp1 = ContaPoupanca(111,202,10)
+    cp1 = ContaPoupanca(111, 202, 10)
     cp1.sacar(15)
     cp1.depositar(5)
     cp1.sacar(14)
-    cc1 = ContaCorrente(111,202,10, -100)
+    cc1 = ContaCorrente(111, 202, 10, -100)
     cc1.sacar(15)
     cc1.depositar(5)
     cc1.sacar(14)
